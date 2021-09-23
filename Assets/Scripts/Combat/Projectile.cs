@@ -14,22 +14,19 @@ namespace RPG.Combat
         [SerializeField] float lifeAfterImpact = 2f;
         [SerializeField] UnityEvent onHit;
 
-        Health target = null;
-        float damage = 10f;
-        GameObject instgator = null;
+        private Health target = null;
+        private Vector3 targetPoint;
+        private float damage = 10f;
+        private GameObject instgator = null;
 
         private void Start()
         {
-            if (target == null) return;
-
             transform.LookAt(GetAimLocation());
         }
         // Update is called once per frame
         private void Update()
         {
-            if (target == null) return;
-
-            if (isHoming && !target.IsDead())
+            if (target != null && isHoming && !target.IsDead())
             {
                 transform.LookAt(GetAimLocation());
             }
@@ -38,14 +35,15 @@ namespace RPG.Combat
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.GetComponent<Health>() == target)
-            {
-                target.TakeDamage(instgator, damage);
-            }
-            else if(other.GetComponent<Health>())
-            {
-                return;
-            }
+            Health health = other.GetComponent<Health>();
+
+            if(target != null && health != target) { return; }
+            if(health == null || health.IsDead()) { return; }
+            if(other.gameObject == instgator) { return; }
+
+            health.TakeDamage(instgator, damage);
+
+            speed = 0;
 
             onHit.Invoke();
             if (hitEffect != null)
@@ -53,7 +51,6 @@ namespace RPG.Combat
                 Instantiate(hitEffect, GetAimLocation(), transform.rotation);
             }
 
-            speed = 0;
             foreach (GameObject toDestroy in destroyOnHit)
             {
                 Destroy(toDestroy);
@@ -64,7 +61,18 @@ namespace RPG.Combat
 
         public void SetTarget(Health target, float damage, GameObject instgator)
         {
+            SetTarget(damage, instgator, target);
+        }
+
+        public void SetTarget(Vector3 targetPoint, float damage, GameObject instgator)
+        {
+            SetTarget(damage, instgator, null, targetPoint);
+        }
+
+        public void SetTarget(float damage, GameObject instgator, Health target = null, Vector3 targetPoint = default)
+        {
             this.target = target;
+            this.targetPoint = targetPoint;
             this.damage = damage;
             this.instgator = instgator;
 
@@ -78,6 +86,11 @@ namespace RPG.Combat
 
         private Vector3 GetAimLocation()
         {
+            if(target == null)
+            {
+                return targetPoint;
+            }
+
             CapsuleCollider targetCapsule = target.GetComponent<CapsuleCollider>();
             if(targetCapsule == null)
             {

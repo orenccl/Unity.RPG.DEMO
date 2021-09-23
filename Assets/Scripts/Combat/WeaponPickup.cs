@@ -8,6 +8,7 @@ namespace RPG.Combat
     {
         [SerializeField] WeaponConfig weapon = null;
         [SerializeField] float respawnTime = 3;
+        //[SerializeField] float pickupRange = 15;
 
         private void PickUp(Fighter fighter)
         {
@@ -38,8 +39,11 @@ namespace RPG.Combat
 
             if (Input.GetMouseButtonDown(0))
             {
-                //callingController.GetComponent<Fighter>().PickUp(gameObject);
-                PickUp(callingController.GetComponent<Fighter>());
+                //if(Vector3.Distance(transform.position, callingController.transform.position) < pickupRange)
+                //{
+                //}
+                    //callingController.GetComponent<Fighter>().PickUp(gameObject);
+                    PickUp(callingController.GetComponent<Fighter>());
             }
             return true;
         }

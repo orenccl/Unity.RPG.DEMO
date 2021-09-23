@@ -91,6 +91,6 @@ MonoBehaviour:
   sceneToLoad: 1
   spwanPoint: {fileID: 0}
   destination: 0
-  fadeOutTime: 1
-  fadeInTime: 2
-  fadeWaitTime: 0.5
+  fadeOutTime: 0.15
+  fadeInTime: 0.15
+  fadeWaitTime: 0.15

@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11021095523dfc04ca76329e8cd8c2bc, type: 3}
+  m_Name: Default Enemy Drops
+  m_EditorClassIdentifier: 
+  potentialDrops:
+  - item: {fileID: 11400000, guid: 6c545425345604845a731b4259dc874c, type: 2}
+    relativeChance:
+    - 1
+    - 1
+    - 1
+    minNumber: 010000000100000001000000
+    maxNumber: 010000000100000001000000
+  - item: {fileID: 11400000, guid: f93c61f95f2af5048aa25441e30a5936, type: 2}
+    relativeChance:
+    - 1
+    - 1
+    - 1
+    minNumber: 010000000200000003000000
+    maxNumber: 020000000300000004000000
+  - item: {fileID: 11400000, guid: e3a4bad591f4b4b4a8cc39766789c1d8, type: 2}
+    relativeChance:
+    - 1
+    - 1
+    - 1
+    minNumber: 010000000200000003000000
+    maxNumber: 020000000300000004000000
+  - item: {fileID: 11400000, guid: a5d1445d7e000a8479e11e45f45495e6, type: 2}
+    relativeChance:
+    - 1
+    - 1
+    - 1
+    minNumber: 010000000100000001000000
+    maxNumber: 010000000100000001000000
+  - item: {fileID: 11400000, guid: fc9fe2f105b225c448f68c6db9483bca, type: 2}
+    relativeChance:
+    - 1
+    - 1
+    - 1
+    minNumber: 010000000100000001000000
+    maxNumber: 010000000100000001000000
+  - item: {fileID: 11400000, guid: 16bbdd3df2a88754585704eb8b278a82, type: 2}
+    relativeChance:
+    - 1
+    - 1
+    - 1
+    minNumber: 010000000100000001000000
+    maxNumber: 010000000100000001000000
+  - item: {fileID: 11400000, guid: d982194ad9f970c42adb4d2535fca568, type: 2}
+    relativeChance:
+    - 1
+    - 1
+    - 1
+    minNumber: 010000000100000001000000
+    maxNumber: 010000000100000001000000
+  - item: {fileID: 11400000, guid: 715bfcfbe04f8e244807171936a698df, type: 2}
+    relativeChance:
+    - 1
+    - 1
+    - 1
+    minNumber: 010000000100000001000000
+    maxNumber: 010000000100000001000000
+  - item: {fileID: 11400000, guid: 872c7f58ca218ec44ae8636ec356b2de, type: 2}
+    relativeChance:
+    - 1
+    - 1
+    - 1
+    minNumber: 010000000100000001000000
+    maxNumber: 010000000100000001000000
+  - item: {fileID: 11400000, guid: c13a9bdc175503b4b8e167ea0ebff3b6, type: 2}
+    relativeChance:
+    - 1
+    - 1
+    - 1
+    minNumber: 010000000100000001000000
+    maxNumber: 010000000100000001000000
+  - item: {fileID: 11400000, guid: 1cd8eed369256c94ca3665a859118862, type: 2}
+    relativeChance:
+    - 1
+    - 1
+    - 1
+    minNumber: 010000000100000001000000
+    maxNumber: 010000000100000001000000
+  - item: {fileID: 11400000, guid: fa68920eb3d156949b3d5030d313f36b, type: 2}
+    relativeChance:
+    - 1
+    - 1
+    - 1
+    minNumber: 010000000100000001000000
+    maxNumber: 010000000100000001000000
+  - item: {fileID: 11400000, guid: 0b7a372ef4c3b1549b02d2dcb76df0e3, type: 2}
+    relativeChance:
+    - 1
+    - 1
+    - 1
+    minNumber: 0a0000000f00000014000000
+    maxNumber: 320000004b00000064000000
+  dropChancePercentage:
+  - 60
+  - 75
+  - 90
+  minDrops: 010000000200000003000000
+  maxDrops: 020000000300000004000000

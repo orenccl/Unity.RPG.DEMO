@@ -1,4 +1,5 @@
-﻿using RPG.Attributes;
+﻿using GameDevTV.Inventories;
+using RPG.Attributes;
 using RPG.Movement;
 using System;
 using UnityEngine;
@@ -10,6 +11,7 @@ namespace RPG.Control
     public class PlayerController : MonoBehaviour
     {
         Health health;
+        ActionStore actionStore;
 
         [System.Serializable]
         struct CursorMapping
@@ -22,23 +24,30 @@ namespace RPG.Control
         [SerializeField] CursorMapping[] cursorMappings = null;
         [SerializeField] float maxNavMesProjectionDistance = 1.0f;
         [SerializeField] float raycastRadius = 1.0f;
+        [SerializeField] int numberOfAbilities = 6;
+
+        bool isDraggingUI = false;
 
         private void Awake()
         {
             health = GetComponent<Health>();
+            actionStore = GetComponent<ActionStore>();
         }
 
         private void Update()
         {
-            if (InteractWithUI()) return;
+            if (InteractWithUI()) { return; }
+
             if (health.IsDead())
             {
                 SetCursor(CursorType.None);
                 return;
             }
 
-            if (InteractWithComponent()) return;
-            if (InteractWithMovement()) return;
+            UseAbilities();
+
+            if (InteractWithComponent()) { return; }
+            if (InteractWithMovement()) { return; }
             //print("Nothing to do!");
 
             SetCursor(CursorType.None);
@@ -46,12 +55,36 @@ namespace RPG.Control
 
         private bool InteractWithUI()
         {
+            if (Input.GetMouseButtonUp(0))
+            {
+                isDraggingUI = false;
+            }
+
             if (EventSystem.current.IsPointerOverGameObject())
             {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    isDraggingUI = true;
+                }
                 SetCursor(CursorType.UI);
                 return true;
             }
+            if (isDraggingUI)
+            {
+                return true;
+            }
             return false;
+        }
+
+        private void UseAbilities()
+        {
+            for (int i = 0; i < numberOfAbilities; i++)
+            {
+                if (Input.GetKeyDown(KeyCode.Alpha1 + i))
+                {
+                    actionStore.Use(i, gameObject);
+                }
+            }
         }
 
         private bool InteractWithComponent()
@@ -93,8 +126,7 @@ namespace RPG.Control
 
         private bool InteractWithMovement()
         {
-            Vector3 target;
-            bool hasHit = RaycastNavMesh(out target);
+            bool hasHit = RaycastNavMesh(out Vector3 target);
 
             if (hasHit)
             {
@@ -146,7 +178,7 @@ namespace RPG.Control
             return cursorMappings[0];
         }
 
-        private static Ray GetMouseRay()
+        public static Ray GetMouseRay()
         {
             return Camera.main.ScreenPointToRay(Input.mousePosition);
         }

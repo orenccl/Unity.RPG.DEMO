@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - WaitForDestroyed
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -12,9 +13,9 @@ TagManager:
   - 
   - Water
   - UI
+  - Terrain
   - 
-  - 
-  - 
+  - PostProcessing
   - 
   - 
   - 

@@ -1,0 +1,314 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7900553216896404815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252b4446a79ff8c4eba3777dfbdd5ada, type: 3}
+  m_Name: 6ed26a62-c77b-420f-978d-8f53e6433612
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I came here from Taipei.
+  children:
+  - 674dfe95-1260-4eb8-809f-070f87acb115
+  rect:
+    serializedVersion: 2
+    x: 453
+    y: 123
+    width: 200
+    height: 100
+  OnEnterAction: TestSelection
+  OnExitAction: 
+  condition:
+    and: []
+--- !u!114 &-7220656634837020823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252b4446a79ff8c4eba3777dfbdd5ada, type: 3}
+  m_Name: 7fa495b3-c82e-442e-8e7c-45b0a9418535
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Don't you worry about it. Say, do you have something to eat? I'm starving.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1946
+    y: 40
+    width: 200
+    height: 100
+  OnEnterAction: 
+  OnExitAction: TestObjective
+  condition:
+    and: []
+--- !u!114 &-5329571432086335716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252b4446a79ff8c4eba3777dfbdd5ada, type: 3}
+  m_Name: 674dfe95-1260-4eb8-809f-070f87acb115
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Taipei, eh? I heard there's trouble brewing down there.
+  children:
+  - ba631d4a-d098-45a9-9726-61d148e40074
+  - 0c6d9544-d316-430f-998d-4e17c53a8c01
+  rect:
+    serializedVersion: 2
+    x: 701
+    y: 117
+    width: 200
+    height: 100
+  OnEnterAction: 
+  OnExitAction: TestAIExit
+  condition:
+    and: []
+--- !u!114 &-5030005835027810071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252b4446a79ff8c4eba3777dfbdd5ada, type: 3}
+  m_Name: 3ac07dee-31a0-4c24-b68b-704101294532
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Mr. Bowler is a good friend of mine!
+  children:
+  - fbec8ebf-e1a8-4138-96d6-407e7b778e8e
+  rect:
+    serializedVersion: 2
+    x: 1684
+    y: 405
+    width: 200
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+  condition:
+    and: []
+--- !u!114 &-4322469319570217946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252b4446a79ff8c4eba3777dfbdd5ada, type: 3}
+  m_Name: 984dee26-c903-43a1-a2d0-d061464cefc7
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Oh really? Then you must know Mr. Bowler.
+  children:
+  - 3ac07dee-31a0-4c24-b68b-704101294532
+  - 11c1f3f7-aaa9-4d38-8900-f57a21521447
+  rect:
+    serializedVersion: 2
+    x: 1322
+    y: 253
+    width: 200
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+  condition:
+    and: []
+--- !u!114 &-3471597583216767571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252b4446a79ff8c4eba3777dfbdd5ada, type: 3}
+  m_Name: ba631d4a-d098-45a9-9726-61d148e40074
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Did I say Taipei? I'm actually from Thailand.
+  children:
+  - 984dee26-c903-43a1-a2d0-d061464cefc7
+  rect:
+    serializedVersion: 2
+    x: 999
+    y: 11
+    width: 200
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+  condition:
+    and: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeaab1bb4e239c44699c3d7dd86a3536, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 3372353973347225657}
+  - {fileID: 4446765725472388946}
+  - {fileID: -4322469319570217946}
+  - {fileID: -7900553216896404815}
+  - {fileID: -5329571432086335716}
+  - {fileID: -3471597583216767571}
+  - {fileID: 2726286249573727798}
+  - {fileID: -5030005835027810071}
+  - {fileID: 1617435108939088300}
+  - {fileID: -7220656634837020823}
+  - {fileID: 8466518253225479196}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &1617435108939088300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252b4446a79ff8c4eba3777dfbdd5ada, type: 3}
+  m_Name: 11c1f3f7-aaa9-4d38-8900-f57a21521447
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Who?
+  children:
+  - 7fa495b3-c82e-442e-8e7c-45b0a9418535
+  rect:
+    serializedVersion: 2
+    x: 1683
+    y: 181
+    width: 200
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+  condition:
+    and: []
+--- !u!114 &2726286249573727798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252b4446a79ff8c4eba3777dfbdd5ada, type: 3}
+  m_Name: 0c6d9544-d316-430f-998d-4e17c53a8c01
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I haven't heard about any trouble
+  children:
+  - 7fa495b3-c82e-442e-8e7c-45b0a9418535
+  rect:
+    serializedVersion: 2
+    x: 996
+    y: 200
+    width: 200
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+  condition:
+    and: []
+--- !u!114 &3372353973347225657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252b4446a79ff8c4eba3777dfbdd5ada, type: 3}
+  m_Name: 4ebbd622-ce42-43d9-8b9e-5dc0e9a66538
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: You don't look like you're from around here.
+  children:
+  - cb3cc59d-c15c-4456-b448-1df9912d63e6
+  - 6ed26a62-c77b-420f-978d-8f53e6433612
+  rect:
+    serializedVersion: 2
+    x: 233
+    y: 237
+    width: 200
+    height: 100
+  OnEnterAction: TestRootEntry
+  OnExitAction: 
+  condition:
+    and: []
+--- !u!114 &4446765725472388946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252b4446a79ff8c4eba3777dfbdd5ada, type: 3}
+  m_Name: cb3cc59d-c15c-4456-b448-1df9912d63e6
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I've Lived here all my life!
+  children:
+  - 984dee26-c903-43a1-a2d0-d061464cefc7
+  rect:
+    serializedVersion: 2
+    x: 521
+    y: 374
+    width: 200
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+  condition:
+    and: []
+--- !u!114 &8466518253225479196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252b4446a79ff8c4eba3777dfbdd5ada, type: 3}
+  m_Name: fbec8ebf-e1a8-4138-96d6-407e7b778e8e
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: You liar! There ain't no Mr. Bowler, I made him up!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1934
+    y: 406
+    width: 200
+    height: 100
+  OnEnterAction: 
+  OnExitAction: Attack
+  condition:
+    and: []

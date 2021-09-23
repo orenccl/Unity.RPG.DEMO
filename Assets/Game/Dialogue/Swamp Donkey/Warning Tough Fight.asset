@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeaab1bb4e239c44699c3d7dd86a3536, type: 3}
+  m_Name: Warning Tough Fight
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 6935852726076010928}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &6935852726076010928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252b4446a79ff8c4eba3777dfbdd5ada, type: 3}
+  m_Name: cd5b551d-05d3-49ff-9461-e2a57d8ed886
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 200
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+  condition:
+    and: []

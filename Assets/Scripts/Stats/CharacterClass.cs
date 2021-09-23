@@ -5,6 +5,7 @@
         Player,
         Knight,
         Mage,
-        Archer
+        Archer,
+        Heavy
     }
 }

@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7863063928450460481}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.04, z: -0.195}
+  m_LocalPosition: {x: 0, y: 0.02, z: -0.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8539000191449135976}
@@ -93,6 +93,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 683665561133135398, guid: f2de6a160937ec34b8bbc807aed0e698,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 683665561133135398, guid: f2de6a160937ec34b8bbc807aed0e698,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 683665561133135398, guid: f2de6a160937ec34b8bbc807aed0e698,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 683665561133135398, guid: f2de6a160937ec34b8bbc807aed0e698,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -141,6 +156,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2797301872066591937, guid: f2de6a160937ec34b8bbc807aed0e698,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4920103921783694046, guid: f2de6a160937ec34b8bbc807aed0e698,
         type: 3}
       propertyPath: weapon
@@ -151,6 +171,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bow Pickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 7874005851256847082, guid: f2de6a160937ec34b8bbc807aed0e698,
+        type: 3}
+      propertyPath: m_Range
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7874005851256847082, guid: f2de6a160937ec34b8bbc807aed0e698,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2de6a160937ec34b8bbc807aed0e698, type: 3}

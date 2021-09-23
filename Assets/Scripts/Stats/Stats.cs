@@ -5,6 +5,11 @@
         Health,
         XpReward,
         XpToLevelUp,
-        Damage
+        Damage,
+        Mana,
+        ManaRegenRate,
+        TotalTraitPoints,
+        BuyingDiscountPercentage,
+        Defence,
     }
 }

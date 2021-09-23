@@ -1,6 +1,6 @@
-﻿using RPG.Attributes;
+﻿using GameDevTV.Saving;
+using RPG.Attributes;
 using RPG.Core;
-using RPG.Saving;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -14,11 +14,14 @@ namespace RPG.Movement
 
         NavMeshAgent navMeshAgent;
         Health health;
+        Animator animator;
 
         private void Awake()
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
             health = GetComponent<Health>();
+            animator = GetComponent<Animator>();
+            animator.enabled = true;
         }
 
         // Update is called once per frame
@@ -61,7 +64,7 @@ namespace RPG.Movement
             Vector3 velocity = navMeshAgent.velocity;
             Vector3 localVelocity = transform.InverseTransformDirection(velocity);
             float speed = localVelocity.z;
-            GetComponent<Animator>().SetFloat("forwardSpeed", speed);
+            animator.SetFloat("forwardSpeed", speed);
         }
 
         private float GetPathLength(NavMeshPath path)

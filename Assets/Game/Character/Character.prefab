@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 2043780714003497528}
   - component: {fileID: 768296193}
   - component: {fileID: 768296194}
-  - component: {fileID: 3359170603151623974}
+  - component: {fileID: -520330841846620763}
   - component: {fileID: 6625845113119762091}
   - component: {fileID: 7361964210907979672}
   - component: {fileID: 2810323364866628953}
-  - component: {fileID: -520330841846620763}
   - component: {fileID: -1950640198920178779}
+  - component: {fileID: 3364550084450810319}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -57,6 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -81,6 +82,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!195 &768296193
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -116,7 +118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 6
---- !u!114 &3359170603151623974
+  maxNavPathLength: 40
+--- !u!114 &-520330841846620763
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,12 +128,52 @@ MonoBehaviour:
   m_GameObject: {fileID: 2043780714003497530}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e882aafc5af26942ba81509aa8e9312, type: 3}
+  m_Script: {fileID: 11500000, guid: 22dd8099b57d2804987076c38990020a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorMappings: []
-  maxNavMesProjectionDistance: 1
-  maxNavPathLength: 40
+  regenRationPercentage: 70
+  takeDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3021444863798132103}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: Spawn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 13
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8018181852975275462}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDie:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 131555422364099574}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6625845113119762091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,59 +220,8 @@ MonoBehaviour:
   timeBetweenAttacks: 1
   rightHandTransform: {fileID: 0}
   leftHandTransform: {fileID: 0}
-  defaultWeapon: {fileID: 0}
---- !u!114 &-520330841846620763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043780714003497530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22dd8099b57d2804987076c38990020a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  regenRationPercentage: 70
-  takeDamage:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3021444863798132103}
-        m_MethodName: Spawn
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 13
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8018181852975275462}
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onDie:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 131555422364099574}
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  defaultWeaponConfig: {fileID: 0}
+  autoAttackRange: 4
 --- !u!114 &-1950640198920178779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,6 +239,20 @@ MonoBehaviour:
   progression: {fileID: 11400000, guid: 09dfbe0878180c54c8dcb825c1c0947d, type: 2}
   levelUpParticleEffect: {fileID: 0}
   shouldUseModifiers: 0
+--- !u!114 &3364550084450810319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043780714003497530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a871f7cf811b6945a64885a3ec206bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scatterDistance: 1
+  dropLibrary: {fileID: 0}
 --- !u!1 &2169873514987911707
 GameObject:
   m_ObjectHideFlags: 0

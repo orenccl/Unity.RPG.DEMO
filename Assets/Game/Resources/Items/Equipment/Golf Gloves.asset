@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98962269ebbceca46b81aa8c9645b5fc, type: 3}
+  m_Name: Golf Gloves
+  m_EditorClassIdentifier: 
+  itemID: 5f97abc8-4080-4bf6-aa14-31caf0af6262
+  displayName: Golf Gloves
+  description: Golf Gloves
+  icon: {fileID: 21300000, guid: d4f5634edede200468fc1ccf30e6f3a1, type: 3}
+  pickup: {fileID: 1112948953295865569, guid: 8a14f8fb152b7f44192cb9f95bac5076, type: 3}
+  stackable: 0
+  price: 245
+  category: 1
+  allowedEquipLocation: 7
+  addtiveModifiers:
+  - stat: 3
+    value: 5
+  percentageModifiers: []

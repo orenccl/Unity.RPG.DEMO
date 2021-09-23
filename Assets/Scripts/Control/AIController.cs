@@ -5,6 +5,7 @@ using RPG.Core;
 using RPG.Movement;
 using System;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace RPG.Control
 {
@@ -42,15 +43,28 @@ namespace RPG.Control
             player = GameObject.FindWithTag("Player");
 
             guardPosition = new LazyValue<Vector3>(GetGuardPosition);
+            guardPosition.ForceInit();
+        }
+
+        public void Reset()
+        {
+            NavMeshAgent navMeshAgent = GetComponent<NavMeshAgent>();
+            navMeshAgent.Warp(guardPosition.value);
+
+            timeSinceLastSawPlayer = Mathf.Infinity;
+            timeSinceArrivedWaypoint = Mathf.Infinity;
+            timeSinceAggrevated = Mathf.Infinity;
+            currentWaypointIndex = 0;
+        }
+
+        public void Aggrevate()
+        {
+            timeSinceAggrevated = 0;
         }
 
         private Vector3 GetGuardPosition()
         {
             return transform.position;
-        }
-        private void Start()
-        {
-            guardPosition.ForceInit();
         }
 
         private void UpdateTimers()
@@ -77,12 +91,6 @@ namespace RPG.Control
                 PatrolBehavior();
             }
             UpdateTimers();
-        }
-
-        public void Aggrevate()
-        {
-
-            timeSinceAggrevated = 0;
         }
 
         private void PatrolBehavior()
@@ -123,7 +131,7 @@ namespace RPG.Control
             foreach(RaycastHit hit in hits)
             {
                 AIController ai = hit.transform.gameObject.GetComponent<AIController>();
-                if (ai = null) continue;
+                if (ai == null) continue;
                 
                 ai.Aggrevate();
             }

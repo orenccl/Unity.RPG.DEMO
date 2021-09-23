@@ -1,4 +1,4 @@
-﻿using RPG.Saving;
+﻿using GameDevTV.Saving;
 using System;
 using UnityEngine;
 
@@ -9,6 +9,14 @@ namespace RPG.Stats
         [SerializeField] float experiencPoints = 0;
 
         public event Action onExperienceGained;
+
+        private void Update()
+        {
+            if (Input.GetKey(KeyCode.E))
+            {
+                GainExperience(Time.deltaTime * 100);
+            }
+        }
 
         public void GainExperience(float experience)
         {

@@ -1,0 +1,287 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8085777303770252013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252b4446a79ff8c4eba3777dfbdd5ada, type: 3}
+  m_Name: 26f6dd05-5df8-42c3-8875-6b77e18320ef
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I am very busy!
+  children:
+  - d13c2c87-1b8d-483b-8a26-3daa8c3e42a1
+  rect:
+    serializedVersion: 2
+    x: 389
+    y: 171
+    width: 200
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+  condition:
+    and: []
+--- !u!114 &-6808831935706264765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252b4446a79ff8c4eba3777dfbdd5ada, type: 3}
+  m_Name: e67104c2-0c63-4c8b-b3eb-70a8493dd8c4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I'm already on the case.
+  children:
+  - 73a42a6c-8fed-4d96-9636-48b29cc39c6c
+  rect:
+    serializedVersion: 2
+    x: 390
+    y: 440
+    width: 200
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Talk to uncle Roger
+        negate: 0
+    - or:
+      - predicate: CompletedQuest
+        parameters:
+        - Talk to uncle Roger
+        negate: 1
+--- !u!114 &-2017018662038582803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252b4446a79ff8c4eba3777dfbdd5ada, type: 3}
+  m_Name: 69418797-9c49-45f5-a5d8-a5e92d0284be
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Sure, how?
+  children:
+  - 6e46d261-ccb2-4ce6-be93-a8ed050f1d9d
+  rect:
+    serializedVersion: 2
+    x: 385
+    y: 307
+    width: 200
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Talk to uncle Roger
+        negate: 1
+--- !u!114 &-1576076620771478989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252b4446a79ff8c4eba3777dfbdd5ada, type: 3}
+  m_Name: d13c2c87-1b8d-483b-8a26-3daa8c3e42a1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Alright...
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 640
+    y: 183
+    width: 200
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+  condition:
+    and: []
+--- !u!114 &-722888130969461441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252b4446a79ff8c4eba3777dfbdd5ada, type: 3}
+  m_Name: 2f1bd218-bb48-4000-883a-1f369fe500c0
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: That's amazing thank you!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 642
+    y: 580
+    width: 200
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+  condition:
+    and: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeaab1bb4e239c44699c3d7dd86a3536, type: 3}
+  m_Name: QuestGiveTest
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 4520088926185548792}
+  - {fileID: -8085777303770252013}
+  - {fileID: -2017018662038582803}
+  - {fileID: 8231552957916983109}
+  - {fileID: -1576076620771478989}
+  - {fileID: -6808831935706264765}
+  - {fileID: 8366364140847123883}
+  - {fileID: 2520197308756290611}
+  - {fileID: -722888130969461441}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &2520197308756290611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252b4446a79ff8c4eba3777dfbdd5ada, type: 3}
+  m_Name: a4461b58-56c1-4458-b5c6-d21ad3494322
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I have completed!
+  children:
+  - 2f1bd218-bb48-4000-883a-1f369fe500c0
+  rect:
+    serializedVersion: 2
+    x: 402
+    y: 580
+    width: 200
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Talk to uncle Roger
+        negate: 0
+    - or:
+      - predicate: CompletedQuest
+        parameters:
+        - Talk to uncle Roger
+        negate: 0
+      - predicate: HasInventoryItem
+        parameters:
+        - 602ad49e-3b42-4832-8a3f-480c96805701
+        negate: 0
+--- !u!114 &4520088926185548792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252b4446a79ff8c4eba3777dfbdd5ada, type: 3}
+  m_Name: 2a92712f-a12a-4e37-a582-beecaa4458fb
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Can you help me?
+  children:
+  - 26f6dd05-5df8-42c3-8875-6b77e18320ef
+  - 69418797-9c49-45f5-a5d8-a5e92d0284be
+  - e67104c2-0c63-4c8b-b3eb-70a8493dd8c4
+  - a4461b58-56c1-4458-b5c6-d21ad3494322
+  rect:
+    serializedVersion: 2
+    x: 56
+    y: 277
+    width: 200
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+  condition:
+    and: []
+--- !u!114 &8231552957916983109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252b4446a79ff8c4eba3777dfbdd5ada, type: 3}
+  m_Name: 6e46d261-ccb2-4ce6-be93-a8ed050f1d9d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Talk to Uncle Roger.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 633
+    y: 301
+    width: 200
+    height: 100
+  OnEnterAction: 
+  OnExitAction: GiveQuest
+  condition:
+    and: []
+--- !u!114 &8366364140847123883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252b4446a79ff8c4eba3777dfbdd5ada, type: 3}
+  m_Name: 73a42a6c-8fed-4d96-9636-48b29cc39c6c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Oops, bad memory.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 637
+    y: 441
+    width: 200
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+  condition:
+    and: []
